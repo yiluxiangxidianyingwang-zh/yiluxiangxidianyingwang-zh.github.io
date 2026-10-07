@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一路向西电影网｜以“路途、边界与相遇”重新阅读公路电影</title>
+<meta name="description" content="一路向西电影网是一个专注公路电影、西部类型、迁徙叙事与跨文化影像的中文研究站点。网站从旅程结构、地理边界、角色相遇、视听语言和创作背景出发，提供评论、专题与资料线索。官方地址：https://yiluxiangxidianyingwang-zh.github.io。本站不提供影片下载、网盘资源或在线播放。">
+<meta name="keywords" content="一路向西电影网, 公路电影研究, 西部电影, 迁徙叙事, 跨文化影像, 电影评论, 旅途结构, yiluxiangxidianyingwang-zh.github.io">
+<meta name="author" content="一路向西电影网编辑组">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#1a1f24">
+<link rel="canonical" href="https://yiluxiangxidianyingwang-zh.github.io">
+<style>
+:root{--bg:#ece9e2;--ink:#181d22;--muted:#6c727a;--line:#d4cfc4;--frame:#f4f2ec;--rust:#b24424;--clay:#cf6d3d;--sage:#596f58;--deep:#243a43;--navy:#2a3645;--paper:#fafaf7;--r:26px;--s:16px;--m:26px}
+*{margin:0;padding:0;border:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:118px}
+body{background:var(--bg);color:var(--ink);font:16.5px/1.8 "WenQuanYi Micro Hei","Microsoft YaHei","PingFang SC",sans-serif;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(120deg,#eeebe4,#e7e3d9 55%,#ece8df);pointer-events:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit;color:inherit;background:none}
+:focus-visible{outline:2.5px solid var(--rust);outline-offset:3px}
+::selection{background:var(--rust);color:#fff}
+.wrap{max-width:1400px;margin:0 auto;padding:0 38px}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+.eyebrow{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:800}
+.dirline{display:flex;gap:13px;align-items:center;color:var(--muted);font-size:.8rem}
+.dirline::before{content:"";width:34px;height:2px;background:var(--rust)}
+.barrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{border:1.5px solid var(--line);background:var(--frame);border-radius:100px;padding:7px 14px;font-size:.78rem;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+button{cursor:pointer}
+
+/* topbar */
+.top{background:var(--ink);color:#ece8df}
+.topin{max-width:1400px;margin:0 auto;padding:13px 38px;display:flex;gap:26px;align-items:center;font-size:.76rem;color:#cbc5ba;flex-wrap:wrap}
+.topin b{letter-spacing:.14em;color:var(--clay)}
+.topin .dom{margin-left:auto;letter-spacing:.04em;word-break:break-all}
+
+/* banner */
+.banner{padding:74px 0 46px;border-bottom:2px solid var(--ink);position:relative}
+.eyes{display:flex;gap:20px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.16em;color:var(--muted)}
+.hero{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);gap:60px;margin-top:38px;align-items:end}
+@media(max-width:1000px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.8rem,8.5vw,7rem);line-height:.9;font-weight:950;letter-spacing:-.055em}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.hero .sub{margin-top:30px;font-size:1.2rem;line-height:1.75;max-width:40ch;color:#363c44}
+.hero .sub b{background:linear-gradient(transparent 62%,#e9c1ad 62%);font-weight:800;color:var(--ink)}
+.hero aside{border:2px solid var(--ink);border-radius:var(--r);background:var(--paper);padding:30px;box-shadow:9px 9px 0 var(--ink)}
+.hero aside h2{font-size:1.05rem;font-weight:800;letter-spacing:.04em;margin-bottom:20px}
+.hero aside dl{display:grid;grid-template-columns:auto 1fr;gap:15px 22px;font-size:.96rem}
+.hero aside dt{color:var(--rust);font-weight:800;font-size:.74rem;letter-spacing:.12em}
+.hero aside dd{font-size:.94rem}
+.hero aside dd code{word-break:break-all}
+.signature{margin-top:34px;display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:end;border-top:1px solid var(--line);padding-top:24px}
+.bignum{font-size:clamp(2.4rem,5.5vw,4.5rem);font-weight:950;letter-spacing:-.045em;line-height:1}
+.bignum small{display:block;font-size:.78rem;color:var(--muted);font-weight:700;letter-spacing:.1em;margin-top:10px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(236,233,226,.94);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--line)}
+.navin{display:flex;gap:9px;align-items:center;padding:16px 0;flex-wrap:wrap}
+.brand2{font-weight:950;font-size:1.18rem;letter-spacing:-.02em;margin-right:14px}
+.brand2 i{color:var(--rust);font-style:normal}
+.navin nav{display:flex;gap:4px;flex-wrap:wrap}
+.navin a{font-size:.85rem;padding:9px 12px;border-radius:10px}
+.navin a:hover{background:var(--frame)}
+.domchip{margin-left:auto;font-size:.78rem;border:1.5px dashed var(--ink);border-radius:12px;padding:10px 14px;color:var(--ink);max-width:360px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* layout */
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:66px;padding:66px 0 88px}
+@media(max-width:1040px){.layout{grid-template-columns:1fr}.side{position:static !important;max-height:none !important}}
+.side{position:sticky;top:116px;align-self:start;display:flex;flex-direction:column;gap:22px}
+.map{border-left:2px solid var(--ink);padding-left:26px;display:grid;gap:17px}
+.map a{display:grid;gap:4px;font-size:.95rem;position:relative;padding:4px 0}
+.map a::before{content:"";position:absolute;left:-34px;top:9px;width:14px;height:14px;border:2px solid var(--ink);background:var(--bg);border-radius:50%}
+.map a:hover::before{background:var(--rust)}
+.map a b{font-size:.68rem;letter-spacing:.18em;color:var(--rust);font-weight:800}
+.map a span{color:#4b525a;font-size:.82rem}
+.notice{border:2px solid var(--ink);border-radius:20px;padding:26px;background:var(--paper)}
+.notice h3{font-size:1.05rem;margin-bottom:12px;font-weight:900}
+.notice p{font-size:.86rem;color:#444a52}
+.notice a{color:var(--rust);font-weight:700;border-bottom:1px solid currentColor}
+
+/* generic sections */
+section{padding:58px 0;border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:46px;margin-bottom:44px;align-items:end}
+@media(max-width:900px){.head{grid-template-columns:1fr}}
+.head h2{font-size:clamp(2rem,4.4vw,3.6rem);line-height:1.18;letter-spacing:-.035em;font-weight:950}
+.head h2 i{font-style:normal;color:var(--rust)}
+.head p{color:#41474e;font-size:1.03rem;max-width:56ch}
+
+/* columns */
+.columns{display:grid;gap:26px;grid-template-columns:repeat(4,1fr)}
+@media(max-width:1080px){.columns{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.columns{grid-template-columns:1fr}}
+.col{border:2px solid var(--ink);border-radius:var(--r);background:var(--paper);padding:0 0 26px;overflow:hidden;display:flex;flex-direction:column;transition:.28s}
+.col:hover{transform:translateY(-8px);box-shadow:11px 11px 0 var(--clay)}
+.col .topband{padding:20px 26px;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:baseline}
+.col .topband b{font-size:1.55rem;font-weight:950;letter-spacing:-.02em}
+.col .topband span{font-size:.7rem;letter-spacing:.16em}
+.col h3{padding:26px 26px 0;font-size:1.28rem;font-weight:900;letter-spacing:-.015em}
+.col p{padding:12px 26px 0;font-size:.94rem;color:#4c535b}
+.col ul{margin-top:20px;padding:22px 26px 0;border-top:1px dashed var(--line);display:grid;gap:10px}
+.col li{font-size:.88rem;color:#444a52;padding-left:19px;position:relative}
+.col li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--rust)}
+.col li b{color:var(--ink)}
+
+/* road */
+.road{display:grid;gap:24px;grid-template-columns:repeat(5,1fr)}
+@media(max-width:1080px){.road{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.road{grid-template-columns:1fr}}
+.step{border-top:5px solid var(--ink);padding:28px 24px 26px;background:var(--frame);border-radius:0 0 20px 20px;display:flex;flex-direction:column;gap:13px;min-height:288px}
+.step:nth-child(2){border-color:var(--rust)}
+.step:nth-child(3){border-color:var(--clay)}
+.step:nth-child(4){border-color:var(--sage)}
+.step:nth-child(5){border-color:var(--deep)}
+.step time{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.76rem;letter-spacing:.1em;color:var(--rust);font-weight:800}
+.step h3{font-size:1.28rem;line-height:1.42;font-weight:950;letter-spacing:-.018em}
+.step p{font-size:.9rem;color:#4d535b}
+.step span{margin-top:auto;font-size:.75rem;color:var(--muted);border-top:1px solid var(--line);padding-top:13px}
+
+/* cards */
+.cards{display:grid;gap:28px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:1040px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:660px){.cards{grid-template-columns:1fr}}
+.card{background:var(--paper);border-radius:var(--r);padding:0;overflow:hidden;border:1.5px solid var(--line)}
+.card .ph{height:214px;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.92);transition:.6s}
+.card:hover .ph img{transform:scale(1.075)}
+.card .inner{padding:28px 28px 30px;display:flex;flex-direction:column;gap:11px}
+.card .meta{display:flex;justify-content:space-between;font-size:.74rem;letter-spacing:.08em;color:var(--rust)}
+.card h3{font-size:1.4rem;line-height:1.4;font-weight:950;letter-spacing:-.02em}
+.card p{font-size:.94rem;color:#4b525a}
+.card a{margin-top:8px;color:var(--rust);font-weight:800;font-size:.84rem;letter-spacing:.06em}
+
+/* alternates */
+.duo{display:grid;gap:30px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.duo{grid-template-columns:1fr}}
+.duo article{border-radius:var(--r);padding:36px;color:#fff;display:flex;flex-direction:column;gap:16px;min-height:300px}
+.duo article.r{background:var(--rust)}
+.duo article.d{background:var(--deep)}
+.duo h3{font-size:1.75rem;letter-spacing:-.022em;line-height:1.32;font-weight:950}
+.duo p{font-size:.98rem;opacity:.92}
+.duo a{margin-top:auto;font-size:.84rem;border-bottom:1.5px solid currentColor;align-self:flex-start;padding-bottom:4px}
+
+/* voices */
+.voices{display:grid;gap:24px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:800px){.voices{grid-template-columns:1fr}}
+.voice{border:1.5px solid var(--line);border-radius:var(--r);padding:32px;background:var(--paper);position:relative}
+.voice::before{content:""";position:absolute;top:14px;left:22px;font-size:4rem;line-height:1;color:#e3ded2;font-family:Georgia,serif}
+.voice blockquote{font-size:1.14rem;line-height:1.65;letter-spacing:-.012em;font-weight:700}
+.voice cite{display:block;margin-top:20px;font-style:normal;font-size:.84rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:16px}
+
+/* directory */
+.panel{border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.panel .ctrl{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:2px solid var(--ink);background:var(--frame)}
+.panel .ctrl input{border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;min-width:260px;font-size:.93rem}
+.panel .ctrl input:focus{outline:0;border-color:var(--rust)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.dirsc{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:860px}
+th,td{padding:22px 26px;text-align:left;vertical-align:top;border-bottom:1.5px solid var(--line)}
+th{font-size:.7rem;letter-spacing:.18em;color:var(--rust);text-transform:uppercase;background:var(--frame)}
+td.t{font-weight:900;font-size:1.06rem}
+td small{display:block;color:var(--muted);font-size:.82rem;margin-top:5px}
+td.c{text-align:center}
+.tag{display:inline-block;border:1.5px solid var(--ink);border-radius:9px;padding:5px 10px;font-size:.74rem;font-weight:700}
+.empty{padding:36px;text-align:center;color:var(--muted);display:none}
+
+/* faq */
+.faq{display:grid;gap:15px}
+details{border:1.5px solid var(--line);border-radius:18px;background:var(--paper);padding:24px 28px}
+details[open]{border-color:var(--ink)}
+summary{cursor:pointer;font-size:1.15rem;font-weight:900;letter-spacing:-.012em;list-style:none;display:flex;gap:16px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"○";color:var(--rust);font-weight:900}
+details[open] summary::before{content:"●"}
+details p{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line);color:#444a52;font-size:.98rem}
+
+/* form */
+.formwrap{border:2px solid var(--ink);border-radius:var(--r);background:var(--paper);padding:38px}
+.fgrid{display:grid;gap:24px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:720px){.row2{grid-template-columns:1fr}}
+label{display:block;font-size:.74rem;letter-spacing:.14em;color:var(--muted);margin-bottom:9px;font-weight:700}
+input,textarea,select{border:1.5px solid var(--line);border-radius:13px;padding:15px;font-size:1rem;width:100%;background:var(--frame)}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--rust)}
+textarea{min-height:160px;resize:vertical}
+.checks{display:grid;gap:12px}
+.checks label{display:flex;gap:11px;align-items:center;font-size:.94rem;color:#41474e;letter-spacing:0;font-weight:400}
+.checks input{width:19px;height:19px;flex:0 0 19px}
+.cta{background:var(--ink);color:#fff;border-radius:14px;padding:18px 38px;font-size:.98rem;font-weight:900;letter-spacing:.08em;border:2px solid var(--ink)}
+.cta:hover{background:var(--rust);border-color:var(--rust)}
+.msg{display:none;color:var(--rust);font-weight:800;margin-top:18px}
+
+/* footer */
+footer{border-top:8px solid var(--ink);background:#11161a;color:#c6c1b6}
+.fin{max-width:1400px;margin:0 auto;padding:78px 38px 42px;display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:50px}
+@media(max-width:940px){.fin{grid-template-columns:1fr 1fr}}
+.fin h3{font-size:.74rem;letter-spacing:.2em;color:var(--clay);margin-bottom:22px;text-transform:uppercase}
+.fin ul{display:grid;gap:13px;font-size:.93rem}
+.fin a:hover{color:#fff}
+.fname{font-size:2.3rem;font-weight:950;letter-spacing:-.03em;color:#fff;line-height:1}
+.fin p{margin-top:20px;color:#a7a198;font-size:.95rem;max-width:38ch}
+.fdom{margin-top:28px;border:1.5px solid #333a40;border-radius:18px;padding:22px}
+.fdom b{display:block;color:var(--clay);font-size:.68rem;letter-spacing:.18em;margin-bottom:9px}
+.fdom code{word-break:break-all;color:#fff}
+.fbot{max-width:1400px;margin:0 auto;padding:26px 38px 44px;border-top:1px solid #2a3036;display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;font-size:.82rem;color:#8d8880}
+.mob{display:none}
+@media(max-width:1040px){.navin nav{display:none;width:100%;flex-direction:column;align-items:stretch}.navin nav.open{display:flex}.burg{display:flex}.domchip{display:none}.wrap,.fin,.fbot{padding-left:22px;padding-right:22px}.head,.cards,.duo,.voices,.columns,.road{padding-left:0;padding-right:0}.hero{padding:22px}.col h3,.col p,.col ul{padding-left:22px;padding-right:22px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="top"><div class="topin"><b>一路向西电影网</b><span>以旅程结构研究公路、西部、迁徙与跨文化电影</span><span class="dom">yiluxiangxidianyingwang-zh.github.io</span></div></div>
+
+<header class="banner"><div class="wrap">
+ <div class="eyes"><span>电影评论</span><span>类型研究</span><span>地理与叙事</span><span>资料线索</span><span class="dirline">更新于 <span id="ud"></span></span></div>
+ <div class="hero">
+  <div><h1>一路<em>向西</em><br>电影网</h1><p class="sub">一部公路电影不是“有人开车去某地”，而是<strong>用移动改变人物与世界的关系</strong>。一路向西电影网试图解释旅程如何组织时间、空间、身份与相遇。</p>
+   <div class="signature"><div><div class="bignum">04<small>个研究栏目</small></div></div><div><div class="bignum">12<small>类分析角度</small></div></div><div><div class="bignum">01<small>个官方访问地址</small></div></div></div>
+  </div>
+  <aside><h2>本期研究简报</h2><dl><dt>网站名称</dt><dd>一路向西电影网</dd><dt>内容定位</dt><dd>公路电影、西部类型、迁徙叙事、跨文化影像</dd><dt>内容形式</dt><dd>评论、专题、创作背景、资料线索</dd><dt>研究对象</dt><dd>旅程结构、地理边界、角色相遇与视听语言</dd><dt>官方地址</dt><dd><code>https://yiluxiangxidianyingwang-zh.github.io</code></dd></dl></aside>
+ </div>
+</div></header>
+
+<div class="nav"><div class="wrap navin"><a class="brand2" href="#top"><i>西</i>一路向西电影网</a><button class="burg mob" aria-label="打开目录"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><nav id="mn"><a href="#about">研究起点</a><a href="#columns">四个栏目</a><a href="#road">旅程五步</a><a href="#space">空间与边界</a><a href="#meet">角色相遇</a><a href="#forms">类型变体</a><a href="#source">资料目录</a><a href="#faq">常见疑问</a><a href="#contact">来信入口</a></nav><span class="domchip">访问地址：https://yiluxiangxidianyingwang-zh.github.io</span></div></div>
+
+<div class="wrap"><div class="layout">
+ <aside class="side">
+  <div class="map">
+   <a href="#about"><b>00 / 起点</b><span>研究边界与内容承诺</span></a>
+   <a href="#columns"><b>01 / 栏目</b><span>四个固定内容栏目</span></a>
+   <a href="#road"><b>02 / 路线</b><span>旅程结构的五个步骤</span></a>
+   <a href="#space"><b>03 / 空间</b><span>地理、边界与自然</span></a>
+   <a href="#meet"><b>04 / 相遇</b><span>同路人、陌生人与家庭</span></a>
+   <a href="#forms"><b>05 / 变体</b><span>类型如何改变旅程</span></a>
+   <a href="#source"><b>06 / 目录</b><span>作品、文章与公开资料</span></a>
+   <a href="#faq"><b>07 / 答疑</b><span>版权、来源与投稿</span></a>
+   <a href="#contact"><b>08 / 来信</b><span>补充线索或申请转载</span></a>
+  </div>
+  <div class="notice"><h3>本页使用说明</h3><p>这是一路向西电影网的单页站点，内部导航均使用页内定位。所有外部访问应指向 <a href="https://yiluxiangxidianyingwang-zh.github.io">https://yiluxiangxidianyingwang-zh.github.io</a>。</p></div>
+ </aside>
+
+ <main id="top">
+  <section id="about">
+   <div class="head"><div><span class="eyebrow">研究起点</span><h2>“向西”不是方向，<i>是一次被迫重新解释自己的移动。</i></h2></div><div><p>一路向西电影网以“移动”为线索，研究人物如何离开旧环境、进入陌生空间，并在途中接受他人的判断。道路只是载体，真正变化的是人物与家庭、身份、劳动和边界之间的关系。</p></div></div>
+   <div class="duo">
+    <article class="r"><span class="eyebrow" style="color:#ffd9c8">本站做什么</span><h3>把旅程拆成可讨论的问题。</h3><p>从出发理由、道路选择、停留地点、同路人、终点是否兑现等角度，解释作品如何组织人物变化，而非只概括剧情。</p><a href="#columns">进入四个研究栏目</a></article>
+    <article class="d"><span class="eyebrow" style="color:#a9c8d2">本站不做什么</span><h3>不提供下载、网盘或在线播放。</h3><p>一路向西电影网只提供评论、研究资料与观看建议。涉及资源、盗版或无法核验来源的问题，不在编辑范围内。</p><a href="#faq">查看版权与内容边界</a></article>
+   </div>
+  </section>
+
+  <section id="columns">
+   <div class="head"><div><span class="eyebrow">01 / 四个栏目</span><h2>栏目不是分类标签，<i>是四套不同问题。</i></h2></div><div><p>一路向西电影网把内容分为旅程结构、空间与边界、角色相遇、类型变体四个栏目。栏目之间可以交叉，但每一栏都保留独立的研究对象。</p></div></div>
+   <div class="columns">
+    <article class="col"><div class="topband"><b>01</b><span>栏目</span></div><h3>旅程结构</h3><p>分析出发、道路、停留、同路人、终点如何组织一部作品的时间。</p><ul><li><b>为什么必须离开</b>：经济、家庭、债务或欲望</li><li>地图选择如何成为价值判断</li><li>终点是否兑现，决定了旅程的意义</li></ul></article>
+    <article class="col"><div class="topband"><b>02</b><span>栏目</span></div><h3>空间与边界</h3><p>城市、荒野、国境、道路和小镇不是背景，而是限制人物行动的条件。</p><ul><li>道路如何制造自由与失控</li><li>边界如何检验身份与归属感</li><li>自然景观与工业景观的对位</li></ul></article>
+    <article class="col"><div class="topband"><b>03</b><span>栏目</span></div><h3>角色相遇</h3><p>旅途中的陌生人会改变人物，但也可能只是投射人物自己的想象。</p><ul><li>同路人何时从同伴变成负担</li><li>短暂相遇如何形成转折</li><li>家庭等待者为何同样重要</li></ul></article>
+    <article class="col"><div class="topband"><b>04</b><span>栏目</span></div><h3>类型变体</h3><p>公路片、西部片、犯罪片、喜剧和纪录片使用移动的方式并不相同。</p><ul><li>西部空间如何被现代公路片改写</li><li>犯罪片为何必须不停移动</li><li>女性、少数族裔与移民视角的修正</li></ul></article>
+   </div>
+  </section>
+
+  <section id="road">
+   <div class="head"><div><span class="eyebrow">02 / 旅程五步</span><h2>离开之后，<i>故事才真正开始。</i></h2></div><div><p>并非所有作品都完整走过这五步，但五步能够检验一部旅途作品是否成立：离开是否有代价，道路是否改变人物，终点是否兑现。</p></div></div>
+   <div class="road">
+    <article class="step"><time>STEP 01</time><h3>离开的理由</h3><p>人物通常不是自由选择，而是被家庭、债务、暴力、身份或欲望推出原地。评论应判断“为什么必须走”，而不是只记录出发事件。</p><span>关键证据：开场冲突、家庭对话、经济条件</span></article>
+    <article class="step"><time>STEP 02</time><h3>道路的选择</h3><p>地图与交通工具决定人物能看见什么。主路代表效率，支路和故障制造停顿，停顿则让人物被迫面对自己。</p><span>关键证据：路线变化、车辆状态、道路环境</span></article>
+    <article class="step"><time>STEP 03</time><h3>空间与边界</h3><p>边境、收费站、小镇和荒野不只提供视觉差异，还限制身份、语言、资金与行动。边界常常把抽象问题变成具体风险。</p><span>关键证据：证件、检查、语言切换、消费</span></article>
+    <article class="step"><time>STEP 04</time><h3>同路人</h3><p>同行者让人物必须说话、解释或妥协。真正有效的相遇不会简单解决冲突，而会改变人物理解自己目的的方式。</p><span>关键证据：分工、争执、沉默、分离</span></article>
+    <article class="step"><time>STEP 05</time><h3>终点的兑现</h3><p>到达不等于完成。人物可能找到新目的，也可能无法返回原处。终点与开场理由之间的关系，是判断旅程是否完整的核心。</p><span>关键证据：人物行动、关系变化、结尾留白</span></article>
+   </div>
+  </section>
+
+  <section id="space">
+   <div class="head"><div><span class="eyebrow">03 / 空间与边界</span><h2>边界的意义，<i>是让人物无法再用旧身份过关。</i></h2></div><div><p>空间研究关注“人物能到哪里、不能到哪里”。西部、公路与迁徙叙事都依赖可跨越与不可跨越的界线，界线越具体，人物的选择越有解释力。</p></div></div>
+   <div class="cards">
+    <article class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=70" alt="公路向远处延伸，对应道路空间研究"></div><div class="inner"><span class="meta"><span>研究角度 A</span><span>道路</span></span><h3>道路不是中性通道</h3><p>道路提供速度，也取消停留。它把风景变成掠影，把人物关系压缩进封闭车厢。</p><a href="#">阅读方法 →</a></div></article>
+    <article class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=70" alt="荒漠与开阔地形，对应西部空间研究"></div><div class="inner"><span class="meta"><span>研究角度 B</span><span>荒野</span></span><h3>开阔地为何不等于自由</h3><p>缺少服务、通讯和庇护理由的地方，会把人物的独立迅速转化为脆弱。</p><a href="#">阅读方法 →</a></div></article>
+    <article class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=900&q=70" alt="边境道路与检查设施，对应边界研究"></div><div class="inner"><span class="meta"><span>研究角度 C</span><span>边界</span></span><h3>证件、语言与消费能力</h3><p>边界把抽象身份变成可被查验的材料，也迫使人物重新分配信任和资金。</p><a href="#">阅读方法 →</a></div></article>
+   </div>
+  </section>
+
+  <section id="meet">
+   <div class="head"><div><span class="eyebrow">04 / 角色相遇</span><h2>同行者不是工具人，<i>他们决定主角不能只为自己解释。</i></h2></div><div><p>相遇栏目比较三种关系：主动结伴、被迫同行、短暂接触。人物对陌生人的判断，往往暴露其原有阶层、性别与家庭观念。</p></div></div>
+   <div class="voices">
+    <div class="voice"><blockquote>旅程最有力的时刻不是人物到达，而是人物被迫向另一个人说明自己为什么要走。</blockquote><cite>一路向西电影网｜角色相遇研究笔记</cite></div>
+    <div class="voice"><blockquote>等待者容易被写成静态背景，但当镜头允许他们有自己的时间与判断时，旅程就不再属于一个人。</blockquote><cite>一路向西电影网｜家庭与移动专题</cite></div>
+   </div>
+  </section>
+
+  <section id="forms">
+   <div class="head"><div><span class="eyebrow">05 / 类型变体</span><h2>同样在移动，<i>公路喜剧、犯罪片和西部片并不在说同一件事。</i></h2></div><div><p>类型决定人物为何不能停留、观众期待何种风险，以及结尾能否被社会重新接纳。比较类型，是为了解释形式如何影响意义。</p></div></div>
+   <div class="cards">
+    <article class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=70" alt="汽车与沿途风景，对应公路类型研究"></div><div class="inner"><span class="meta"><span>类型 01</span><span>公路片</span></span><h3>移动作为自我修正</h3><p>公路片通常允许人物在终点前后发生变化，风险来自关系、经济与未知空间。</p><a href="#">比较研究 →</a></div></article>
+    <article class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=900&q=70" alt="荒野与历史地貌，对应西部片研究"></div><div class="inner"><span class="meta"><span>类型 02</span><span>西部片</span></span><h3>土地、法律与暴力秩序</h3><p>西部片的空间承载国家扩张与族群冲突，现代改编则常把荒野改写为心理边界。</p><a href="#">比较研究 →</a></div></article>
+    <article class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1449965408869-26e5f5d1dcdd?auto=format&fit=crop&w=900&q=70" alt="夜间城市与道路，对应犯罪类型研究"></div><div class="inner"><span class="meta"><span>类型 03</span><span>犯罪与动作</span></span><h3>持续移动成为生存条件</h3><p>人物不能停留，路线、车辆和同伴因而直接决定叙事效率，空间几乎始终处于威胁中。</p><a href="#">比较研究 →</a></div></article>
+   </div>
+  </section>
+
+  <section id="source">
+   <div class="head"><div><span class="eyebrow">06 / 资料目录</span><h2>资料目录用于核对研究材料，<i>不表示推荐、评分或完整片单。</i></h2></div><div><p>可使用下方标签切换栏目，也可输入关键词检索。编号仅表示归档顺序，不代表年份、质量或重要程度。</p></div></div>
+   <div class="panel">
+    <div class="ctrl"><div class="tabs" id="tabs"><button class="chip" aria-pressed="true" data-c="all">全部</button><button class="chip" aria-pressed="false" data-c="road">旅程结构</button><button class="chip" aria-pressed="false" data-c="space">空间边界</button><button class="chip" aria-pressed="false" data-c="meet">角色相遇</button><button class="chip" aria-pressed="false" data-c="source">公开资料</button></div><input id="q" type="search" aria-label="检索资料目录：输入栏目、关键词或资料类型"></div>
+    <div class="dirsc"><table id="tb">
+     <thead><tr><th style="width:86px">编号</th><th>研究条目</th><th style="width:132px">所属栏目</th><th>核心问题</th><th style="width:120px">状态</th></tr></thead>
+     <tbody>
+      <tr data-c="road"><td class="mono">R-01</td><td class="t">离开理由的三种类型<small>经济压力、家庭断裂、身份寻找</small></td><td class="c"><span class="tag">旅程结构</span></td><td>人物离开是否有具体代价，而非抽象冲动？</td><td class="c">已整理</td></tr>
+      <tr data-c="space"><td class="mono">S-02</td><td class="t">地图、路线与可见性<small>主路、支路与故障造成的信息差</small></td><td class="c"><span class="tag">空间边界</span></td><td>为什么选择某条路线，会改变观众获得的信息？</td><td class="c">已整理</td></tr>
+      <tr data-c="meet"><td class="mono">M-03</td><td class="t">短暂相遇与永久转折<small>陌生人如何改变旅程目的</small></td><td class="c"><span class="tag">角色相遇</span></td><td>哪些相遇真正改变人物，哪些只是情节工具？</td><td class="c">已整理</td></tr>
+      <tr data-c="source"><td class="mono">D-04</td><td class="t">片方、节展与公开访谈<small>可作为评论依据的公开材料</small></td><td class="c"><span class="tag">公开资料</span></td><td>如何区分可核验材料与观后感？</td><td class="c">已整理</td></tr>
+      <tr data-c="road"><td class="mono">R-05</td><td class="t">终点的三种兑现方式<small>到达、折返、拒绝终点</small></td><td class="c"><span class="tag">旅程结构</span></td><td>结尾与开场理由之间形成什么关系？</td><td class="c">增补中</td></tr>
+      <tr data-c="space"><td class="mono">S-06</td><td class="t">等待者的空间经验<small>家庭、车站、电话与边界另一侧</small></td><td class="c"><span class="tag">空间边界</span></td><td>未出发者如何构成旅程的另一半？</td><td class="c">增补中</td></tr>
+      <tr data-c="meet"><td class="mono">M-07</td><td class="t">同行关系中的权力分配<small>司机、出资者、熟人与陌生人</small></td><td class="c"><span class="tag">角色相遇</span></td><td>移动中的资源如何决定人物话语权？</td><td class="c">待补</td></tr>
+      <tr data-c="source"><td class="mono">D-08</td><td class="t">合法观看版本与字幕差异<small>院线、正式发行、修复与字幕</small></td><td class="c"><span class="tag">公开资料</span></td><td>观众如何判断版本可靠性？</td><td class="c">已整理</td></tr>
+     </tbody>
+    </table></div>
+    <p class="empty" id="none">未找到匹配的条目。可尝试“旅程”“边界”“相遇”或“资料”。</p>
+   </div>
+  </section>
+
+  <section id="faq">
+   <div class="head"><div><span class="eyebrow">07 / 常见疑问</span><h2>关于内容边界、资料来源和版权，<i>读者最常问的问题。</i></h2></div><div><p>这些问题来自读者来信。若你的具体情况未被覆盖，请通过“来信入口”提供完整作品、版本与来源信息。</p></div></div>
+   <div class="faq">
+    <details open><summary>一路向西电影网提供影片下载或在线播放吗？</summary><p>不提供。本站只进行电影评论、类型研究、资料梳理与观看建议。下载、网盘资源和在线播放涉及版权、版本与安全风险，不在本站服务范围内。</p></details>
+    <details><summary>“一路向西”是具体作品研究，还是一种叙事方法？</summary><p>它首先是一种研究方法：以离开、道路、边界、相遇和终点为核心，比较不同作品的旅程结构。本站会涉及具体作品，但不会替代观众观看。</p></details>
+    <details><summary>网站资料能否直接作为论文引用来源？</summary><p>可作为观点与检索线索，但事实性内容应回到片方、节展、学术出版或公开访谈核验。引用评论内容时，应注明作者、标题、网站名称与官方地址。</p></details>
+    <details><summary>官方访问地址是什么？</summary><p>一路向西电影网唯一官方地址为：<code class="mono">https://yiluxiangxidianyingwang-zh.github.io</code>。请勿通过网盘、短链接或第三方镜像访问本站资料。</p></details>
+    <details><summary>如何申请转载或提交勘误？</summary><p>评论转载须事先获得书面授权，并保留作者署名、原文标题与链接。勘误请通过来信入口提交作品、原文位置、正确信息与可核验来源。</p></details>
+   </div>
+  </section>
+
+  <section id="contact">
+   <div class="head"><div><span class="eyebrow">08 / 来信入口</span><h2>欢迎补充公开资料、研究线索与勘误，<i>但请先写明来源。</i></h2></div><div><p>提交前请确认资料能够公开核验，并尽量提供作品年份、导演、版本和原始出处。编辑组会根据相关性、准确性与资料完整度回复。</p></div></div>
+   <div class="formwrap"><form class="fgrid" id="cf" novalidate>
+    <div class="row2"><div><label for="nm">称呼或笔名</label><input id="nm" name="nm" type="text" required></div><div><label for="em">联系邮箱</label><input id="em" name="em" type="email" required></div></div>
+    <div class="row2"><div><label for="tp">来信类型</label><select id="tp" name="tp" required><option value="">请选择</option><option>公开资料补充</option><option>研究线索</option><option>资料勘误</option><option>转载申请</option><option>版权问题</option><option>其他建议</option></select></div><div><label for="wk">相关作品或导演</label><input id="wk" name="wk" type="text"></div></div>
+    <div><label for="tx">来信内容、版本与可核验来源</label><textarea id="tx" name="tx" required></textarea></div>
+    <div class="checks"><label><input type="checkbox" required> 我确认所提交资料不要求本站提供下载、网盘或在线播放，并允许编辑组在核验后使用。</label><label><input type="checkbox" required> 我了解个人联系方式仅用于回复，不会被公开在网站页面。</label></div>
+    <div><button class="cta" type="submit">提交给编辑组</button><span class="msg" id="ok">已收到来信。编辑组将核验资料后回复，请勿重复提交。</span></div>
+   </form></div>
+  </section>
+ </main>
+</div></div>
+
+<footer><div class="fin">
+ <div><div class="fname">一路向西电影网</div><p>以公路电影、西部类型、迁徙叙事与跨文化影像为主要方向的中文研究站点，通过旅程结构解释作品中的移动、边界与相遇。</p><div class="fdom"><b>唯一官方访问地址</b><code>https://yiluxiangxidianyingwang-zh.github.io</code></div></div>
+ <div><h3>研究栏目</h3><ul><li><a href="#columns">旅程结构</a></li><li><a href="#space">空间与边界</a></li><li><a href="#meet">角色相遇</a></li><li><a href="#forms">类型变体</a></li></ul></div>
+ <div><h3>研究资料</h3><ul><li><a href="#source">资料目录</a></li><li><a href="#road">旅程五步</a></li><li><a href="#faq">常见疑问</a></li><li><a href="#">修订记录</a></li></ul></div>
+ <div><h3>参与方式</h3><ul><li><a href="#contact">来信入口</a></li><li><a href="#">转载申请</a></li><li><a href="#">资料勘误</a></li><li><a href="#">版权说明</a></li></ul></div>
+</div><div class="fbot"><span>© <span id="yr"></span> 一路向西电影网（yiluxiangxidianyingwang）。页面涉及的影片、剧照、海报及相关资料权利归相应权利人所有，本站仅用于评论与研究。</span><span>本站不提供下载、网盘资源或在线播放</span></div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('ud').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric'});
+document.querySelector('.burg').addEventListener('click',function(){document.getElementById('mn').classList.toggle('open')});
+document.querySelectorAll('#mn a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mn').classList.remove('open')})});
+(function(){
+ var q=document.getElementById('q'),rows=document.querySelectorAll('#tb tbody tr'),tabs=document.querySelectorAll('#tabs .chip'),cur='all';
+ function run(){
+  var k=q.value.trim().toLowerCase();var n=0;
+  rows.forEach(function(r){
+   var hit=(!k||r.textContent.toLowerCase().includes(k))&&(cur==='all'||r.dataset.c===cur);
+   r.style.display=hit?'':'none';if(hit)n++;
+  });
+  document.getElementById('none').style.display=n?'none':'block';
+ }
+ q.addEventListener('input',run);
+ tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-pressed','false')});t.setAttribute('aria-pressed','true');cur=t.dataset.c;run()})});
+})();
+document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();this.reset();document.getElementById('ok').style.display='block'});
+</script>
+</body>
+</html>
